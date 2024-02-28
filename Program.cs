@@ -87,10 +87,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+const string uploadsPath = Path.Combine(_hostingEnvironment.WebRootPath, "Uploads");
+if (!Directory.Exists(uploadsPath))
+    Directory.CreateDirectory(uploadsPath);
+
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-            Path.Combine(Directory.GetCurrentDirectory(), "Uploads")),
+            Path.Combine(uploadsPath)),
     RequestPath = "/Uploads"
 });
 
