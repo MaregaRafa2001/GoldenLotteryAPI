@@ -41,7 +41,14 @@ namespace GoldenLotteryAPI.Controllers
         [Route("{id}")]
         public override ActionResult<Order> GetById(long id)
         {
-            return base.GetById(id);
+            try
+            {
+                return new ObjectResult(new { error = "Foi - " + id.ToString() }) { StatusCode = 200 };
+            }
+            catch (Exception ex)
+            {
+                return new ObjectResult(new { error = ex.ToString() }) { StatusCode = 200 };
+            }
         }
         
         [HttpGet]

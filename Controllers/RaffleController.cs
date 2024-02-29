@@ -19,7 +19,14 @@ namespace GoldenLotteryAPI.Controllers
         [AllowAnonymous]
         public override ActionResult<Raffle> GetById(long id)
         {
-            return base.GetById(id);
+            try
+            {
+                return base.GetById(id);
+            }
+            catch (Exception ex)
+            {
+                return new ObjectResult(new { error = ex.ToString() }) { StatusCode = 200 };
+            }
         }
 
         [AllowAnonymous]
