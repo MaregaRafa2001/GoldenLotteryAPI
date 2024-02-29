@@ -43,10 +43,12 @@ namespace GoldenLotteryAPI.Controllers
         {
             try
             {
+                Console.WriteLine("teste");
                 return new ObjectResult(new { error = "Foi - " + id.ToString() }) { StatusCode = 200 };
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.ToString());
                 return new ObjectResult(new { error = ex.ToString() }) { StatusCode = 200 };
             }
         }
