@@ -9,7 +9,7 @@ namespace GoldenLotteryAPI.Core
         {
             context.ExceptionHandled = true;
             Console.WriteLine(context.Exception.ToString());
-            return new ObjectResult(new { error = context.Exception.ToString() }) { StatusCode = 200 };
+            //return new ObjectResult(new { error = context.Exception.ToString() }) { StatusCode = 200 };
 
             context.Result = context.Exception switch
             {

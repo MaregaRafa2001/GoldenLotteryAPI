@@ -44,7 +44,7 @@ namespace GoldenLotteryAPI.Controllers
             try
             {
                 Console.WriteLine("teste");
-                return new();
+                return new Order();
             }
             catch (Exception ex)
             {

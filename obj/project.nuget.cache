@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A143UAhEnZc+63Kj8Bz4jrwZ7OEh9RQ712IPgh2RIueBOqfZVx8UrocBwjC5zRGQdyu/UOP/2ro/ntNmqchyjA==",
+  "dgSpecHash": "bDPhKgekaQZtbcrwuAvlgkBoh683FWYuabTocv6Zzu8uheSG8NR7M34rJ5c4iZhzQBfSRsEt97xN2LUTCML6iA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\GoldenLottery\\GoldenLotteryAPI\\GoldenLotteryAPI.csproj",
+  "projectFilePath": "C:\\Users\\GabrielAraujo\\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\\Área de Trabalho\\API\\GoldenLotteryAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GabrielAraujo\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\GabrielAraujo\\.nuget\\packages\\google.apis\\1.66.0\\google.apis.1.66.0.nupkg.sha512",

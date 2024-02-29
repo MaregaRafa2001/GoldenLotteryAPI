@@ -3425,11 +3425,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\GoldenLottery\\GoldenLotteryAPI\\GoldenLotteryAPI.csproj",
+      "projectUniqueName": "C:\\Users\\GabrielAraujo\\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\\Área de Trabalho\\API\\GoldenLotteryAPI.csproj",
       "projectName": "GoldenLotteryAPI",
-      "projectPath": "C:\\Projetos\\GoldenLottery\\GoldenLotteryAPI\\GoldenLotteryAPI.csproj",
+      "projectPath": "C:\\Users\\GabrielAraujo\\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\\Área de Trabalho\\API\\GoldenLotteryAPI.csproj",
       "packagesPath": "C:\\Users\\GabrielAraujo\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\GoldenLottery\\GoldenLotteryAPI\\obj\\",
+      "outputPath": "C:\\Users\\GabrielAraujo\\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\\Área de Trabalho\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GabrielAraujo\\AppData\\Roaming\\NuGet\\NuGet.Config",
