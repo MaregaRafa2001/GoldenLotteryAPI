@@ -7,7 +7,7 @@ namespace GoldenLotteryAPI.Core
     {
         public void OnException(ExceptionContext context)
         {
-            File.WriteAllText("log.txt", context.Exception.ToString());
+            return new ObjectResult(new { error = context.Exception.ToString() }) { StatusCode = 500 };
 
             context.Result = context.Exception switch
             {
