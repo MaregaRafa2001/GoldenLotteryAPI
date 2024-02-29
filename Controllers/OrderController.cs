@@ -44,7 +44,7 @@ namespace GoldenLotteryAPI.Controllers
             try
             {
                 Console.WriteLine("teste");
-                return new ObjectResult(new { error = "Foi - " + id.ToString() }) { StatusCode = 200 };
+                return new();
             }
             catch (Exception ex)
             {
