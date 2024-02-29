@@ -13,7 +13,7 @@ namespace GoldenLotteryAPI.Core
             {
                 RegisterNotFoundException => new ObjectResult(new {  }) { StatusCode = 200 },
                 ApplicationException => new ObjectResult(new { error = context.Exception.Message }) { StatusCode = 400 },
-                _ => new ObjectResult(new { error = "Internal Server Error" }) { StatusCode = 500 },
+                _ => new ObjectResult(new { error = context.Exception.ToString() }) { StatusCode = 500 },
             };
                 
             // Evita a interferência com outros tratamentos de exceção configurados
