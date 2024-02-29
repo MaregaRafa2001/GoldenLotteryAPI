@@ -98,7 +98,6 @@ namespace GoldenLotteryAPI.Controllers
 
         }
 
-
         [HttpPost]
         [AllowAnonymous]
         [Route("draw/golden")]

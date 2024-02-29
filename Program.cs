@@ -87,7 +87,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-const string uploadsPath = Path.Combine(_hostingEnvironment.WebRootPath, "Uploads");
+const string uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
 if (!Directory.Exists(uploadsPath))
     Directory.CreateDirectory(uploadsPath);
 
