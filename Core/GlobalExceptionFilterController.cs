@@ -7,6 +7,8 @@ namespace GoldenLotteryAPI.Core
     {
         public void OnException(ExceptionContext context)
         {
+            File.WriteAllText("log.txt", context.Exception.ToString());
+
             context.Result = context.Exception switch
             {
                 RegisterNotFoundException => new ObjectResult(new {  }) { StatusCode = 200 },
