@@ -85,6 +85,8 @@ if (app.Environment.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseDeveloperExceptionPage();
+
 app.MapControllers();
 
 const string uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
