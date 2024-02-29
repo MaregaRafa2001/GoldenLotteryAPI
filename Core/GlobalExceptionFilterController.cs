@@ -7,7 +7,8 @@ namespace GoldenLotteryAPI.Core
     {
         public void OnException(ExceptionContext context)
         {
-            return new ObjectResult(new { error = context.Exception.ToString() }) { StatusCode = 500 };
+            context.ExceptionHandled = true;
+            return new ObjectResult(new { error = context.Exception.ToString() }) { StatusCode = 200 };
 
             context.Result = context.Exception switch
             {
@@ -17,7 +18,6 @@ namespace GoldenLotteryAPI.Core
             };
                 
             // Evita a interferência com outros tratamentos de exceção configurados
-            context.ExceptionHandled = true;
         }
 
     }
