@@ -93,12 +93,7 @@ string uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
 if (!Directory.Exists(uploadsPath))
     Directory.CreateDirectory(uploadsPath);
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-            Path.Combine(uploadsPath)),
-    RequestPath = "/Uploads"
-});
+app.UseStaticFiles();
 
 
 app.Run();
