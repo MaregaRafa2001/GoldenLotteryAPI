@@ -62,6 +62,17 @@ builder.Services.AddAuthorizationBuilder()
     .AddPolicy(Enums.EUserPolicies.Any.ToString(), policy => policy.RequireRole(Enums.EUserPolicies.Administrator.ToString(), Enums.EUserPolicies.Customer.ToString()));
 
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAnyOrigin",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+
 var serviceProvider = builder.Services.BuildServiceProvider();
 var httpContextAccessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
 GlobalSettings.Initialize(httpContextAccessor);
@@ -95,5 +106,6 @@ if (!Directory.Exists(uploadsPath))
 
 app.UseStaticFiles();
 
+app.UseCors("AllowAnyOrigin");
 
 app.Run();
