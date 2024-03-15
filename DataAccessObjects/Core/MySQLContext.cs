@@ -8,10 +8,11 @@ namespace GoldenLotteryAPI.DataAccessObjects.Core
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySQL("Server=sql10.freesqldatabase.com;Database=sql10687515;User Id=sql10687515;Password=MTZkBI1x5k;Port=3306;");
+            optionsBuilder.UseMySQL("Server=localhost;Database=GoldenLottery;User Id=root;Password=;Port=3306;");
         }
 
         public DbSet<T> Table { get; set; }
+        public DbSet<Order> Order { get; set; }
         public DbSet<Raffle> Raffle { get; set; }
         public DbSet<OrderItem> OrderItem { get; set; }
         public DbSet<RaffleCustomer> RaffleCustomer { get; set; }

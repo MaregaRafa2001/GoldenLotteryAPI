@@ -24,7 +24,7 @@ namespace GoldenLotteryAPI.BusinessObjects
             return data.UpdateOrderStatus(id, orderStatusId);
         }
 
-        public List<int> ListNumberById(long id)
+        public List<int?> ListNumberById(long id)
         {
             return data.ListNumberById(id);
         }

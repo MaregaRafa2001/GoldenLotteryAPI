@@ -14,6 +14,7 @@ C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de 
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\K4os.Compression.LZ4.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\K4os.Compression.LZ4.Streams.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\K4os.Hash.xxHash.dll
+C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\MercadoPago.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll

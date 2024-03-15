@@ -42,7 +42,7 @@ namespace GoldenLotteryAPI.DataAccessObjects
                     ];
         }
 
-        public List<int> ListNumberById(long id)
+        public List<int?> ListNumberById(long id)
         {
             using var context = MySQLConnection;
             return [.. (from o in context.Table
@@ -50,6 +50,15 @@ namespace GoldenLotteryAPI.DataAccessObjects
                         where o.OrderId == id
                         select oi.Number)
                     ];
+        }
+
+        public override List<Order> ListByFilter(OrderModelFilter filter)
+        {
+            using var context = MySQLConnection;
+            return [.. (
+                from t in context.Table
+                where t.RaffleId == filter.RaffleId && t.CustomerId == filter.CustomerId
+                select t).OrderByDescending(x => x.DateInserted).Skip((filter.RecordsPerPage * filter.Page) - filter.RecordsPerPage).Take(filter.RecordsPerPage)];
         }
     }
 }

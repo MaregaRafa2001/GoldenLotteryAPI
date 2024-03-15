@@ -2,8 +2,14 @@
 using GoldenLotteryAPI.Controllers.Core;
 using GoldenLotteryAPI.Controllers.ModelRequest;
 using GoldenLotteryAPI.Models;
+using MercadoPago.Client.Common;
+using MercadoPago.Client.Payment;
+using MercadoPago.Config;
+using MercadoPago.Resource.Payment;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Security.Policy;
 using static GoldenLotteryAPI.Core.Enums;
 
 namespace GoldenLotteryAPI.Controllers
@@ -38,21 +44,33 @@ namespace GoldenLotteryAPI.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        [Route("{id}")]
-        public override ActionResult<Order> GetById(long id)
+        [Route("Detail/{id}")]
+        public async Task<object> GetDetailById(long id)
         {
-            try
+            var order = business.GetById(id);
+
+            switch (order.OrderStatusId)
             {
-                Console.WriteLine("teste");
-                return new Order();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-                return new ObjectResult(new { error = ex.ToString() }) { StatusCode = 200 };
+                case EOrderStatus.WaitingPayment:
+                    string paymentHtml = "";
+                    using (HttpClient client = new HttpClient())
+                    {
+                        HttpResponseMessage response = await client.GetAsync(order.ImageUrlPaymentDetail);
+                        if (response.IsSuccessStatusCode)
+                            paymentHtml = await response.Content.ReadAsStringAsync();
+                    }
+                    return new { order, paymentHtml };
+
+                case EOrderStatus.Paid:
+                    var numbers = new OrderItemBLL().ListByOrderId(order.OrderId).Select(x => x.Number).ToList();
+                    return new { order, numbers };
+
+                default:
+                case EOrderStatus.Canceled:
+                    return order;
             }
         }
-        
+
         [HttpGet]
         [AllowAnonymous]
         [Route("")]
@@ -84,10 +102,100 @@ namespace GoldenLotteryAPI.Controllers
                 .ToList();
         }
 
+        [HttpPost]
+        [Route("Payment")]
+        [AllowAnonymous]
+        public ActionResult<CreatePaymentPixModelResponse> CreatePayment([FromBody] OrderCreatePaymentModelRequest model)
+        {
+            // verify if has orderItems
+            if (model.QuantityNumbers < 1)
+                throw new ApplicationException("Selecione a quantidade de bilhetes que deseja comprar.");
+
+            //get details about the Raffle
+            Raffle raffle = new RaffleBLL().GetById(model.RaffleId);
+
+            // initialize order
+            Order order = new()
+            {
+                DatePayment = null,
+                RaffleId = model.RaffleId,
+                CustomerId = model.CustomerId,
+                OrderStatusId = EOrderStatus.WaitingPayment,
+                Price = model.QuantityNumbers * raffle.Price,
+            };
+            base.Insert(order);
+
+            // insert foreach orderItem
+            order.OrderItems = [];
+            for (int i = 0; i < model.QuantityNumbers; i++)
+            {
+                order.OrderItems.Add(new()
+                {
+                    OrderId = order.OrderId,
+                    Price = raffle.Price
+                });
+            }
+
+            new OrderItemBLL().InsertList(order.OrderItems);
+
+            // create payment on MercadoPago
+            Payment payment = CreateMercadoPagoPayment(order);
+
+            // if return error
+            if (payment.ApiResponse.StatusCode != 201)
+                return new ObjectResult(new { error = "Erro ao criar pagamento." }) { StatusCode = 500 };
+
+            // else save image of payment details
+            dynamic responseContent = JsonConvert.DeserializeObject(payment.ApiResponse.Content);
+            order.ImageUrlPaymentDetail = responseContent.point_of_interaction.transaction_data.ticket_url;
+            order.LastMercadoPagoId = responseContent.id;
+            business.Update(order);
+
+            // return success
+            return new ObjectResult(new { orderId = order.OrderId }) { StatusCode = 201 };
+        }
+
+        static Payment CreateMercadoPagoPayment(Order order)
+        {
+            Customer customer = new CustomerBLL().GetById(order.CustomerId);
+            MercadoPagoConfig.AccessToken = "APP_USR-5461696117860348-031117-cdc72963cf9e58300b6850cb179d875e-195188072";
+
+            // Criar um objeto de pagamento
+            var paymentRequest = new PaymentCreateRequest
+            {
+                TransactionAmount = order.Price,
+                Description = $"BubuPrêmios - Pedido #{order.OrderId.ToString().PadLeft(5, '0')}",
+                Installments = 1,
+                AdditionalInfo = new PaymentAdditionalInfoRequest()
+                {
+                    Items = new List<PaymentItemRequest>()
+                    {
+                        new()
+                        {
+                            Id = order.OrderId.ToString()
+                        }
+                    }
+                },
+                PaymentMethodId = "pix",
+                Payer = new PaymentPayerRequest
+                {
+                    Email = customer.Email,
+                    Identification = new IdentificationRequest
+                    {
+                        Type = "CPF",
+                        Number = customer.CPF
+                    },
+                }
+            };
+
+            var client = new PaymentClient();
+            return client.Create(paymentRequest);
+        }
+
         [HttpGet]
         [AllowAnonymous]
         [Route("{id}/Numbers")]
-        public ActionResult<List<int>> ListNumberById(long id)
+        public ActionResult<List<int?>> ListNumberById(long id)
         {
             return new OrderBLL().ListNumberById(id);
         }

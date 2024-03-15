@@ -14,6 +14,9 @@ namespace GoldenLotteryAPI.Models
         public long RaffleId { get; set; }
         public decimal Price { get; set; }
         public Enums.EOrderStatus OrderStatusId { get; set; }
+        public string? ImageUrlPaymentDetail { get; set; }
+        public string? LastMercadoPagoId { get; set; }
         public DateTime? DatePayment { get; set; }
+        public List<OrderItem>? OrderItems { get; set; }
     }
 }

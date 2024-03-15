@@ -150,3 +150,4 @@ C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de 
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Debug\net8.0\GoldenLotteryAPI.pdb
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Debug\net8.0\GoldenLotteryAPI.genruntimeconfig.cache
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Debug\net8.0\ref\GoldenLotteryAPI.dll
+C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\MercadoPago.dll

@@ -16,16 +16,17 @@
 
         public enum EOrderStatus
         {
-            Active = 1,
-            WaitingPayment = 2,
-            Paid = 3,
-            Canceled = 4,
+            WaitingPayment = 1,
+            Paid = 2,
+            Canceled = 3
         }
 
         public enum EOrderLogEventTypes
         {
             Created = 1,
             Updated = 2,
+            WebhookSuccess = 3,
+            WebhookFailure = 4,
         }
 
         public enum ERaffleStatus

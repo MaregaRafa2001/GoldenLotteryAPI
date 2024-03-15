@@ -17,6 +17,13 @@ namespace GoldenLotteryAPI.Controllers
 
         [HttpPost]
         [AllowAnonymous]
+        public override ActionResult<Customer> Insert([FromBody] Customer model)
+        {
+            return base.Insert(model);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
         [Route("login")]
         public ActionResult<Customer> Login(string email, string password)
         {
@@ -25,7 +32,7 @@ namespace GoldenLotteryAPI.Controllers
                 return new NotFoundObjectResult(new { status = 204 });
 
             string token = TokenService.GenerateTokenCustomer(customer);
-            return new OkObjectResult(new { token });
+            return new OkObjectResult(new { token, customer = new { customer.CustomerId, customer.Name } });
         }
 
         //[HttpGet]

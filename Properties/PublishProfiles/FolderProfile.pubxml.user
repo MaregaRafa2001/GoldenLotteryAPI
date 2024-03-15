@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Projetos\GoldenLottery\GoldenLotteryAPI\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2024-02-28T19:34:45.5239573Z;True|2024-02-27T21:49:26.1256811-03:00;</History>
+    <_PublishTargetUrl>C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2024-03-15T02:10:56.6964644Z;True|2024-02-28T16:34:45.5239573-03:00;True|2024-02-27T21:49:26.1256811-03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

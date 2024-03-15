@@ -11,5 +11,10 @@ namespace GoldenLotteryAPI.BusinessObjects
         {
             data = new RaffleDAO();
         }
+
+        public List<int> ListSortedNumbersById(long raffleId)
+        {
+            return data.ListSortedNumbersById(raffleId);
+        }
     }
 }
