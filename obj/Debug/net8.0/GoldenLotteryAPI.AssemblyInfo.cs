@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2f9d9ecffcc97f857c013c8ae89b9a9dff9ba55")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

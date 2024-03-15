@@ -8,7 +8,7 @@ namespace GoldenLotteryAPI.DataAccessObjects.Core
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseMySQL("Server=localhost;Database=GoldenLottery;User Id=root;Password=;Port=3306;");
+            optionsBuilder.UseMySQL("Server=node174656-bubupremios.jelastic.saveincloud.net;Database=GoldenLottery;User Id=root;Password=LIDafp96343;Port=15542;");
         }
 
         public DbSet<T> Table { get; set; }

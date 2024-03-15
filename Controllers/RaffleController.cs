@@ -21,10 +21,7 @@ namespace GoldenLotteryAPI.Controllers
         {
             try
             {
-                return new Raffle { Title = "Rifa estática", ImageUrl = "https://cdn.motor1.com/images/mgl/kvwre/s3/honda-xre-300-2022.jpg" };
-
-
-                //return base.GetById(id);
+                return base.GetById(id);
             }
             catch (Exception ex)
             {
