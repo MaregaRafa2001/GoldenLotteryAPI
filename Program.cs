@@ -77,7 +77,6 @@ var serviceProvider = builder.Services.BuildServiceProvider();
 var httpContextAccessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
 GlobalSettings.Initialize(httpContextAccessor);
 
-
 var app = builder.Build();
 
 app.UseCors(builder =>
