@@ -90,6 +90,7 @@ C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de 
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\K4os.Compression.LZ4.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\MercadoPago.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -150,4 +151,3 @@ C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de 
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Debug\net8.0\GoldenLotteryAPI.pdb
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Debug\net8.0\GoldenLotteryAPI.genruntimeconfig.cache
 C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\obj\Debug\net8.0\ref\GoldenLotteryAPI.dll
-C:\Users\GabrielAraujo\OneDrive - IT WORK TECNOLOGIA E INFORMATICA S.A\Área de Trabalho\API\bin\Debug\net8.0\MercadoPago.dll
