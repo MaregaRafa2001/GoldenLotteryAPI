@@ -23,7 +23,6 @@ namespace GoldenLotteryAPI.Controllers
         }
 
         [HttpPatch]
-        [AllowAnonymous]
         [Route("{id}/Status")]
         public ActionResult<Order> UpdateStatus(long id, [FromBody] OrderUpdateStatusModelRequest request)
         {
@@ -113,6 +112,8 @@ namespace GoldenLotteryAPI.Controllers
 
             //get details about the Raffle
             Raffle raffle = new RaffleBLL().GetById(model.RaffleId);
+            if (raffle == null || raffle?.RaffleId == 0)
+                throw new ApplicationException("Rifa não encontrada.");
 
             // initialize order
             Order order = new()
@@ -158,7 +159,7 @@ namespace GoldenLotteryAPI.Controllers
         static Payment CreateMercadoPagoPayment(Order order)
         {
             Customer customer = new CustomerBLL().GetById(order.CustomerId);
-            MercadoPagoConfig.AccessToken = "APP_USR-5461696117860348-031117-cdc72963cf9e58300b6850cb179d875e-195188072";
+            MercadoPagoConfig.AccessToken = "APP_USR-1069429511000603-083016-eb249d468541d967fa660e0c20cc5ebb-387733480";
 
             // Criar um objeto de pagamento
             var paymentRequest = new PaymentCreateRequest

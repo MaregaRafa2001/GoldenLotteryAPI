@@ -82,7 +82,7 @@ namespace GoldenLotteryAPI.Controllers
                     {
                         OrderId = orderId ?? 0,
                         DateInserted = DateTime.Now,
-                        Description = $"{mercadoPagoId} - Transferência de pix no valor de R$ {payment.TransactionAmount.Value:C} recebida com sucesso",
+                        Description = $"{mercadoPagoId} - Transferência de pix no valor de R$ {payment.TransactionAmount:C} recebida com sucesso",
                         OrderLogEventTypeId = GoldenLotteryAPI.Core.Enums.EOrderLogEventTypes.WebhookSuccess
                     });
                 }
@@ -104,7 +104,7 @@ namespace GoldenLotteryAPI.Controllers
 
         Payment GetMercadoPagoPaymentById(long id)
         {
-            MercadoPagoConfig.AccessToken = "APP_USR-5461696117860348-031117-cdc72963cf9e58300b6850cb179d875e-195188072";
+            MercadoPagoConfig.AccessToken = "APP_USR-1069429511000603-083016-eb249d468541d967fa660e0c20cc5ebb-387733480";
             var client = new PaymentClient();
             return client.Get(id);
         }
