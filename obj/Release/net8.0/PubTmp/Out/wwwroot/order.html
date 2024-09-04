@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<div class="container mt-5" ng-controller="OrderController">
+
+    <div class="row mt-5 mb-3">
+        <div class="col-md-12 d-flex justify-content-between">
+            <a class="btn btn-primary" ng-click="lastPage()" href="javascript:void(0)"><i class="fa fa-chevron-left"></i><p class="d-none d-sm-inline"> Voltar</p></a>
+            <h3 class="text-center text-light">Detalhes do pedido</h3>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <!--Aguardando pagamento-->
+        <div class="col-md-12 justify-content-between" ng-show="order.orderStatusId == 1">
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <p>Caso tenha realizado o pagamento, clique aqui:</p>
+                    <button class="btn btn-block btn-primary" ng-click="reload()">Verificar pagamento</button>
+                </div>
+            </div>
+            <div ng-bind-html="paymentHtml"></div>
+            
+        </div>
+
+        <!--Pago-->
+        <div class="card-body col-md-12" ng-show="order.orderStatusId == 2">
+            <div class="feedback-screen text-center"><svg width="320" height="160" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M214.927 61.3763C205.774 30.8482 190.25 25.9619 180.04 24.334C170.031 22.7384 157.782 26.9684 150.068 34.6965C141.599 43.1811 136.141 46.9274 126.755 50.1594C117.791 53.2461 98.8544 55.2667 90.7014 68.2543C80.9114 83.8473 87.18 100.21 103.261 110.624C121.23 122.262 154.608 130.053 185.767 117.816C216.924 105.579 219.863 77.8423 214.927 61.3763Z" fill="black" fill-opacity="0.04"></path><path d="M116.473 50.5H184.898V122H121.698C118.812 122 116.473 119.66 116.473 116.774V50.5Z" fill="#EEEEEE" stroke="white" stroke-width="3"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M114.944 49.5002C114.944 49.224 115.168 49 115.444 49H185.869C186.145 49 186.369 49.2237 186.369 49.4998L186.398 123.5H121.698C117.985 123.497 114.974 120.488 114.97 116.774L114.944 49.5002Z" stroke="#333333" stroke-width="1.5"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M135.908 107.901L128.108 103.797V116.932C128.108 120.56 125.168 123.5 121.541 123.5H186.398C190.025 123.5 192.966 120.56 192.966 116.932V103.797L184.756 107.901L176.615 103.797L168.473 107.901L160.332 103.797L152.19 107.901L144.049 103.797L135.908 107.901Z" fill="white"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M192.966 116.932C192.966 120.481 190.152 123.372 186.633 123.496L186.398 123.5H121.541C125.168 123.5 128.108 120.559 128.108 116.932H192.966Z" fill="#EEEEEE" style="mix-blend-mode:multiply"></path><path d="M128.108 103.797L128.458 103.133L127.358 102.554V103.797H128.108ZM135.908 107.901L135.558 108.565L135.9 108.745L136.245 108.571L135.908 107.901ZM192.966 103.797H193.716V102.583L192.63 103.126L192.966 103.797ZM184.756 107.901L184.418 108.571L184.754 108.741L185.091 108.572L184.756 107.901ZM176.615 103.797L176.952 103.127L176.615 102.957L176.277 103.127L176.615 103.797ZM168.473 107.901L168.135 108.571L168.473 108.741L168.811 108.571L168.473 107.901ZM160.332 103.797L160.669 103.127L160.332 102.957L159.994 103.127L160.332 103.797ZM152.19 107.901L151.853 108.571L152.19 108.741L152.528 108.571L152.19 107.901ZM144.049 103.797L144.387 103.127L144.049 102.957L143.711 103.127L144.049 103.797ZM127.759 104.46L135.558 108.565L136.257 107.238L128.458 103.133L127.759 104.46ZM128.858 116.932V103.797H127.358V116.932H128.858ZM127.358 116.932C127.358 120.145 124.754 122.75 121.541 122.75V124.25C125.582 124.25 128.858 120.974 128.858 116.932H127.358ZM186.398 122.75H121.541V124.25H186.398V122.75ZM192.216 116.932C192.216 120.145 189.611 122.75 186.398 122.75V124.25C190.439 124.25 193.716 120.974 193.716 116.932H192.216ZM192.216 103.797V116.932H193.716V103.797H192.216ZM185.091 108.572L193.301 104.467L192.63 103.126L184.42 107.231L185.091 108.572ZM176.277 104.466L184.418 108.571L185.094 107.232L176.952 103.127L176.277 104.466ZM168.811 108.571L176.952 104.466L176.277 103.127L168.135 107.232L168.811 108.571ZM159.994 104.466L168.135 108.571L168.811 107.232L160.669 103.127L159.994 104.466ZM152.528 108.571L160.669 104.466L159.994 103.127L151.853 107.232L152.528 108.571ZM143.711 104.466L151.853 108.571L152.528 107.232L144.387 103.127L143.711 104.466ZM136.245 108.571L144.387 104.466L143.711 103.127L135.57 107.232L136.245 108.571Z" fill="#333333"></path><circle cx="190" cy="53" r="14.5" transform="rotate(-180 190 53)" fill="#00A650" stroke="#F5F5F5" stroke-width="3"></circle><circle cx="190" cy="53" r="16" transform="rotate(-180 190 53)" stroke="#333333" stroke-width="1.5"></circle><path d="M188.013 55.127L195.514 47.4L197.2 49.1365L188.013 58.6L182.8 53.2294L184.486 51.4929L188.013 55.127Z" fill="white"></path><path d="M122 90.5H137" stroke="#333333" stroke-width="1.5"></path><path d="M122 60.5H168" stroke="#333333" stroke-width="1.5"></path><path d="M122 80H180" stroke="#333333" stroke-width="1.5"></path><path d="M122 70.5H180" stroke="#333333" stroke-width="1.5"></path></svg><h1 class="ticket__large-text text-center" style=" font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif; font-size: 2.5rem; font-weight: 500; line-height: 1.2;">Este pagamento já foi realizado</h1><span class="ticket__medium-text text-center">Agradecemos sua compra!<p>Estes são os números dos seus bilhetes:</p></span></div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-around flex-wrap">
+                        <!-- Loop through the numbers -->
+                        <div class="circle-number" ng-repeat="number in numbers">
+                            {{ number }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

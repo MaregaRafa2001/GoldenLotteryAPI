@@ -1,0 +1,59 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<div class="container mt-5" ng-controller="RegisterController">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4>Criar uma conta</h4>
+                </div>
+                <div class="card-body">
+                    <form ng-submit="submitForm()">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="name">Nome completo:</label>
+                                    <input type="text" class="form-control" id="name" ng-model="customer.name" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" class="form-control" id="cpf" ng-model="customer.cpf" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="birthDate">Data de nascimento:</label>
+                                    <input type="date" class="form-control" id="birthDate" ng-model="customer.birthDate" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="name">Email:</label>
+                                    <input type="email" class="form-control" id="email" ng-model="customer.email" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="name">Senha:</label>
+                                    <input type="password" class="form-control" id="password" ng-model="customer.password" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Criar conta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

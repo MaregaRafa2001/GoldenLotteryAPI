@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="icon" href="/content/small-logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css" crossorigin="anonymous">
+    <title>Bubu Prêmios</title>
+</head>
+<body ng-app="myApp" style="background-color: #fff !important;">
+    <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center bg-light" style="box-shadow: 0px 5px 13px 2px #3f51b5cc;" ng-controller="IndexController">
+
+
+
+        <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
+            <img class="d-none d-lg-inline" src="/content/large-logo.png" style="max-width:600px; vertical-align: middle;" />
+            <img class="d-lg-none mx-auto text-center" src="/content/medium-logo.png" style="max-width:200px; vertical-align: middle;" />
+        </a>
+
+        <button data-name="loginDropdown" id="menu-hamburguer" class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars" style="color: #f8f9fabd !important"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav" data-name="loginDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li ng-show="!auth.isAuthenticated" class="nav-item dropleft btn btn-primary">
+                    <a class="nav-link dropdown-toggle text-light" href="javascript:void(0)" id="drowdownLogin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <strong>Login</strong>
+                    </a>
+                    <div class="dropdown-menu">
+                        <form ng-submit="login()" class="px-4 py-3">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" ng-model="user.email" placeholder="email@exemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha</label>
+                                <input type="password" class="form-control" id="password" ng-model="user.password" placeholder="Senha">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" ng-href="#register">Novo aqui? Cadastre-se</a>
+                        <a class="dropdown-item" href="#">Esqueceu a senha?</a>
+                    </div>
+                </li>
+                <li ng-show="auth.isAuthenticated" class="nav-item btn btn-primary">
+                    <a class="nav-link text-light" href="javascript:void(0)" onclick="location.reload()" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <strong>Encerrar sessão</strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view></div>
+
+    <footer class="text-center p-3 bg-t">
+        &copy; 2024 E-commerce de Rifas
+    </footer>
+
+    <script data-require="angular.js@*" data-semver="1.3.5" src="https://code.angularjs.org/1.3.5/angular.js"></script>
+    <script data-require="angular-route@*" data-semver="1.3.5" src="https://code.angularjs.org/1.3.5/angular-route.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        var app = angular.module('myApp', ['ngRoute'])
+    </script>
+
+    <script src="js/global-settings.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/raffle.js"></script>
+    <script src="js/order.js"></script>
+
+    <script>
+        function toggleLoginDropdown() {
+            var dropdownMenu = $('[data-name=loginDropdown]');
+            dropdownMenu.classList.toggle('show');
+        }
+
+         function copyValue() {
+            let text = document.querySelector('.ticket__extralarge-text--lighter').innerHTML;
+                 navigator.clipboard.writeText(text);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div class="container mt-4" ng-controller="HomeController">
+    <div class="row">
+        <!-- Exemplo de uma Rifa -->
+        <div class="col-md-4 mb-4 cursor-pointer" ng-repeat="raffle in Raffles" ng-click="goTo('raffle/' + raffle.raffleId)">
+            <div class="card mb-3">
+                <img ng-src="{{raffle.imageUrl}}" class="card-img-top" alt="Imagem da Rifa">
+                <div class="card-body">
+                    <h5 class="card-title">{{raffle.title}}</h5>
+                    <p class="card-subtitle mb-2 text-muted">{{raffle.shortDescription}}</p>
+                    <p class="card-text">{{raffle.longDescription}}</p>
+                    <p class="card-text text-success h4 font-weight-bold">{{ raffle.price | brCurrency }}</p>
+                    <a href="javascript:void(0)" class="btn btn-success btn-block">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

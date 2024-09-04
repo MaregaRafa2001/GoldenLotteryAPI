@@ -1,0 +1,177 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\Customer.GoldenLotteryUI.code-workspace",
+      "PackagePath": "staticwebassets\\Customer.GoldenLotteryUI.code-workspace"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\content\\logo.png",
+      "PackagePath": "staticwebassets\\content\\logo.png"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\content\\rifa1.jpg",
+      "PackagePath": "staticwebassets\\content\\rifa1.jpg"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\css\\plugins\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\css\\plugins\\bootstrap-4.1.3-dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\home.html",
+      "PackagePath": "staticwebassets\\home.html"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\global-settings.js",
+      "PackagePath": "staticwebassets\\js\\global-settings.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\home.js",
+      "PackagePath": "staticwebassets\\js\\home.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\plugins\\angular-js\\angular.min.js",
+      "PackagePath": "staticwebassets\\js\\plugins\\angular-js\\angular.min.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\raffle.js",
+      "PackagePath": "staticwebassets\\js\\raffle.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\js\\register.js",
+      "PackagePath": "staticwebassets\\js\\register.js"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\order.html",
+      "PackagePath": "staticwebassets\\order.html"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\package.json",
+      "PackagePath": "staticwebassets\\package.json"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\raffle.html",
+      "PackagePath": "staticwebassets\\raffle.html"
+    },
+    {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\register.html",
+      "PackagePath": "staticwebassets\\register.html"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.GoldenLotteryAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.GoldenLotteryAPI.props",
+      "PackagePath": "build\\GoldenLotteryAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GoldenLotteryAPI.props",
+      "PackagePath": "buildMultiTargeting\\GoldenLotteryAPI.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.GoldenLotteryAPI.props",
+      "PackagePath": "buildTransitive\\GoldenLotteryAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

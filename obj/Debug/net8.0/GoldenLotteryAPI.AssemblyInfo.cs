@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88f20c26bbf406db52bc2b7152e600b151e45482")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+612acd43c45076540dc3ee830ccb4685bad080d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,144 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<div class="container mt-5" ng-controller="RaffleController">
+
+    <!--<div class="row mt-5 mb-3">
+        <div class="col-md-12 d-flex justify-content-between">
+            <a class="btn btn-success" ng-click="lastPage()" href="javascript:void(0)"><i class="fa fa-chevron-left"></i><p class="d-none d-sm-inline"> Voltar</p></a>
+            <h3 class="text-center">Detalhes da Rifa</h3>
+        </div>
+    </div>-->
+
+    <div class="card mb-3" style=" box-shadow: 0px 0px 26px 8px #3f51b5cc; border-radius: 30px 30px 0 0; border: none">
+        <img ng-src="{{raffle.imageUrl}}" class="card-img-top" alt="Imagem da Rifa" style="border-radius: 30px 30px 0 0;">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <h5 class="card-title">{{raffle.title}}</h5>
+                                        <p class="card-subtitle mb-2 text-muted">{{raffle.shortDescription}}</p>
+                                        <p class="card-text h4 font-weight-bold">
+                                            <span><small>{{ raffle.price | brCurrency }}</small></span>
+                                            <span><small><small>x{{qty}}</small></small></span>
+                                            <span style="color: #3f51b5">{{order.price | brCurrency}}</span>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="row d-flex justify-content-end">
+                                    <div class="col-md-8">
+
+                                        <div class="d-flex align-items-baseline">
+                                            <a ng-click="UpdateQty(-1)" class="btn btn-primary form-control" href="javascript:void(0)">
+                                                <i class="fa fa-minus"></i>
+                                            </a>
+                                            <input type="number" class="form-control text-center align-self-end"  ng-model="qty" />
+                                            <a ng-click="UpdateQty(+1)" class="btn btn-primary form-control" href="javascript:void(0)">
+                                                <i class="fa fa-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-end mt-2">
+                                    <div class="col-md-8">
+                                        <button type="button" class="btn btn-primary btn-block waves-effect waves-light" ng-click="createOrder()">Comprar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-md-12">
+                                <div class="text-justify" ng-bind-html="largeDescription">
+
+                                    <!--<p class="card-text text-justify" ng-bind-html="largeDescription"></p>-->
+
+                                    <!--<p><strong>Rifa Imperdível: Concorra a uma Moto XRE 300 e Ganhe a Chance de Levar para Casa um iPhone 15!</strong></p>
+                                    <p>
+                                        Valorize suas chances de vitória com nossa emocionante rifa! Estamos oferecendo a oportunidade de ganhar uma moto XRE 300 novinha em folha. Mas a emoção não para por aí - além da XRE 300, estamos oferecendo 5 bilhetes premiados que darão a você a chance de levar para casa um incrível iPhone 15!
+                                    </p>
+                                    <p><strong>Valor do bilhete:</strong> R$ 01,40</p>
+                                    <p><strong>Data do Sorteio:</strong> 30 de Junho de 2024</p>
+                                    <p>Mas aqui está o que torna esta rifa verdadeiramente emocionante: não apenas um, mas cinco dos nossos bilhetes serão premiados! Esses bilhetes premiados serão sorteados a partir do dia 1 de Junho e a cada 5 dias, um novo bilhete será selecionado como vencedor de um reluzente iPhone 15.                                        </p>
+                                    <p>Não deixe passar essa chance de ganhar uma moto XRE 300 e um iPhone 15! Adquira seus bilhetes agora mesmo e aumente suas chances de vitória!</p>-->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 mb-4">
+                <div class="col-md-10">
+                    <h4>Meus pedidos</h4>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-11">
+                    <input type="text" class="form-control" placeholder="Número do pedido" ng-model="orderFilter.orderId">
+                </div>
+                <div class="col-md-1 text-right">
+                    <button type="button" class="btn btn-primary" title="Pesquisar" ng-click="getOrders()">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pedido</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col" class="text-center">#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-show="isAuthenticated == false">
+                                <td colspan="5" class="text-center">Entre em sua conta para ver seus pedidos</td>
+                            </tr>
+                            <tr ng-show="isAuthenticated && orders.length == 0">
+                                <td colspan="5" class="text-center">Nenhum pedido encontrado.</td>
+                            </tr>
+                            <tr ng-repeat="order in orders">
+                                <td scope="row"><strong># {{order.orderId}}</strong></td>
+                                <td scope="row" ng-bind="order.dateInserted | date:'dd/MM/yyyy'"></td>
+                                <td scope="row" ng-bind="order.price | brCurrency"></td>
+                                <td class="text-center">
+                                    <a class="btn btn-primary" ng-href="#order/{{order.orderId}}"><i class="fa fa-ticket"></i> <p class="d-none d-sm-inline">Ver pedido</p></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row justify-content-between mb-3">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <button class="btn btn-primary mr-3" ng-click="lastPageCustomer()" ng-disabled="RaffleOrderCustomerFilter.page <= 1">
+                            <i class="fa fa-chevron-left"></i><p class="d-none d-sm-inline"> Anterior</p>
+                        </button>
+                        <button class="btn btn-primary" ng-click="nextPageCustomer()" ng-disabled="RaffleOrderCustomerFilter.recordsPerPage > Customers.length">
+                            <p class="d-none d-sm-inline"> Seguinte</p> <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

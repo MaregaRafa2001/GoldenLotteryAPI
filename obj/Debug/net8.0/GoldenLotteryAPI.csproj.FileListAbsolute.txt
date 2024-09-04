@@ -228,3 +228,4 @@ C:\Projetos\GoldenLotteryAPI\obj\Debug\net8.0\refint\GoldenLotteryAPI.dll
 C:\Projetos\GoldenLotteryAPI\obj\Debug\net8.0\GoldenLotteryAPI.pdb
 C:\Projetos\GoldenLotteryAPI\obj\Debug\net8.0\GoldenLotteryAPI.genruntimeconfig.cache
 C:\Projetos\GoldenLotteryAPI\obj\Debug\net8.0\ref\GoldenLotteryAPI.dll
+C:\Projetos\GoldenLotteryAPI\bin\Debug\net8.0\GoldenLotteryAPI.staticwebassets.runtime.json
