@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\content\\logo.png"
     },
     {
+      "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\content\\medium-logo.png",
+      "PackagePath": "staticwebassets\\content\\medium-logo.png"
+    },
+    {
       "Id": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\content\\rifa1.jpg",
       "PackagePath": "staticwebassets\\content\\rifa1.jpg"
     },

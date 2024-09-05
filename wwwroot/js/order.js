@@ -15,5 +15,9 @@ app.controller('OrderController', function ($scope, $routeParams, $rootScope, $s
             console.error('Erro ao obter detalhes do pedido:', error);
         });
 
+    $scope.padNumber = function (num) {
+        return num.toString().padStart(6, '0');
+    };
+
     $scope.reload = $route.reload;
 });

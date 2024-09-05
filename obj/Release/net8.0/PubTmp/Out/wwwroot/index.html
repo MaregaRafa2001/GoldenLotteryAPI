@@ -2,12 +2,13 @@
 <html lang="pt-br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <link rel="icon" href="/content/small-logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/index.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/wwwroot/css/index.css?v5" crossorigin="anonymous">
+    <link rel="icon" href="/wwwroot/content/medium-logo.png" type="image/x-icon">
+
     <title>Bubu Prêmios</title>
+
 </head>
 <body ng-app="myApp" style="background-color: #fff !important;">
     <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center bg-light" style="box-shadow: 0px 5px 13px 2px #3f51b5cc;" ng-controller="IndexController">
@@ -15,11 +16,10 @@
 
 
         <a class="navbar-brand d-flex align-items-center justify-content-center" href="#">
-            <img class="d-none d-lg-inline" src="/content/large-logo.png" style="max-width:600px; vertical-align: middle;" />
-            <img class="d-lg-none mx-auto text-center" src="/content/medium-logo.png" style="max-width:200px; vertical-align: middle;" />
+            <img class="d-lg-none mx-auto text-center" src="/wwwroot/content/medium-logo.png" style="width: 30px; height: 30px; vertical-align: middle;" />
         </a>
 
-        <button data-name="loginDropdown" id="menu-hamburguer" class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button data-name="loginDropdown" id="menu-hamburguer" class="" style="color: rgba(0, 0, 0, .5); cursor: pointer; border-color: #3f51b5; background-color: #3f51b5; padding: .25rem .75rem; font-size: 1.25rem; line-height: 1; border: 1px solid transparent; border-radius: .25rem; " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars" style="color: #f8f9fabd !important"></span>
         </button>
 
@@ -72,13 +72,13 @@
         var app = angular.module('myApp', ['ngRoute'])
     </script>
 
-    <script src="js/global-settings.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/register.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/raffle.js"></script>
-    <script src="js/order.js"></script>
+    <script src="js/global-settings.js?v1"></script>
+    <script src="js/index.js?v1"></script>
+    <script src="js/register.js?v1"></script>
+    <script src="js/home.js?v1"></script>
+    <script src="js/login.js?v1"></script>
+    <script src="js/raffle.js?v1"></script>
+    <script src="js/order.js?v5"></script>
 
     <script>
         function toggleLoginDropdown() {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qulevOtNttXslatlQLKUQZq/NgO4jYoKJ+kLlM/xNIE=",
+  "Hash": "O/rZ0jcLcLxOn3/kRZVEkxY35cl2AjJwAopIMJpmgKU=",
   "Source": "GoldenLotteryAPI",
   "BasePath": "_content/GoldenLotteryAPI",
   "Mode": "Default",
@@ -34,6 +34,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\content\\logo.png"
+    },
+    {
+      "Identity": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\content\\medium-logo.png",
+      "SourceId": "GoldenLotteryAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\",
+      "BasePath": "_content/GoldenLotteryAPI",
+      "RelativePath": "content/medium-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\medium-logo.png"
     },
     {
       "Identity": "C:\\Projetos\\GoldenLotteryAPI\\wwwroot\\content\\rifa1.jpg",
