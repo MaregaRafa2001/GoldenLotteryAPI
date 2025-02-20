@@ -68,8 +68,7 @@ app.run(function ($rootScope, $http, $location) {
             ...headers
         };
 
-        //var apiUrl = 'http://localhost:5299/' + url;
-        var apiUrl = 'https://bubupremios.jelastic.saveincloud.net/' + url;
+        var apiUrl = 'https://bubupremios.sp1.br.saveincloud.net.br/' + url;
 
         return $http({
             method: method,

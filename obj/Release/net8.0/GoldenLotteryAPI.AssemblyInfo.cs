@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e8beb943dd846f4690adb7ae5db731ead903d7b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1292fc12a9190c11c0047cded0dcac8ea99c0d8e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoldenLotteryAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
